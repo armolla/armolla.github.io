@@ -234,7 +234,6 @@ section.skillsContainer, section.contactContainer, form.contactForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 h4.habilitysTitle {
