@@ -1,0 +1,626 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Barra de navegación. */
+nav.mainNav {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    padding: 20px;
+    border-bottom: 2px solid #555;
+    position: fixed;
+}
+
+div.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.fontLogo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+/* Menú hamburguesa. */
+div.buttonBars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+span.topBar, span.middleBar, span.bottomBar {
+    display: block;
+    height: 3px;
+    background-color: #f1f1f1;
+    width: 30px;
+    margin: 0px 4px 5px;
+    border-radius: 10px;
+    transform-origin: 0px 100%;
+    transition: all 0.5s;
+}
+
+span.topBar {
+  margin-top: 5px;
+}
+
+
+/* Animación del menú hamburguesa. */
+.activeTopBar {
+    transform: rotate(45deg) translate(-4px, 0px);
+}
+
+.activeMiddleBar {
+    opacity: 0;
+}
+
+.activeBottomBar{
+    transform: rotate(-45deg) translate(-2px, 1px);
+}
+
+
+/* Menu desplegable. */
+div.menu {
+    position: absolute;
+    left: -100%;
+    top: 62px;
+    width: 100vw;
+    height: calc(100vh - 62px);
+    background-color: #000;
+    transition: left 1s ease;
+}
+
+ul.listMenu {
+    list-style: none;
+}
+
+li.itemMenu {
+    width: 100%;
+}
+
+a.linkMenu {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #f1f1f1;
+    padding: 20px 15px;
+    font-size: 20px;
+}
+
+
+/* Header */
+header.homeContainer {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+div.imgContainer, div.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+h1.titlePortfolio {
+    font-size: 30px;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+p.subtitle {
+    font-size: 20px;
+    color: #555;
+    padding: 20px 0px;
+}
+
+a.btnContact, button.btnContact {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #016cbc;
+    padding: 15px;
+    border-radius: 2px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+img.imgBanner {
+    width: 50%;
+    max-width: 160px;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+
+/* Mí perfil. */
+section.profileContainer {
+    background-color: #000;
+    height: 100vh;
+    padding: 20px 0px;
+}
+
+h2.titlePortfolio {
+    font-size: 24px;
+    color: #fff;
+    margin: 20px;
+}
+
+
+p.infoProfile {
+    display: block;
+    max-width: 450px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #c2bcbc;
+    padding: 25px;
+    text-align: justify;
+    border-top: 8px solid #016cbc;
+    border-bottom: 8px solid #016cbc;
+    border-radius: 8px;
+    margin: 0px 10px 20px;
+}
+
+
+/* Tecnologías que uso. */
+section.tecContainer {
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+img.tecImg {
+    width: 60px;
+}
+
+h3.tecTitle {
+    font-size: 24px;
+    color: #fff;
+    margin: 30px 10px;
+}
+
+div.iconsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div.tecIcons1, div.tecIcons2 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    border-top: 8px solid #016cbc;
+    border-radius: 8px;
+}
+
+div.tecIcons2 {
+    border-top: none;
+    border-bottom: 8px solid #016cbc;
+    border-radius: 8px;
+}
+
+
+/* Mís habilidades. */
+section.skillsContainer, section.contactContainer, form.contactForm {
+    background-color: #000;
+    color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h4.habilitysTitle {
+    font-size: 24px;
+}
+
+div.languajesContainer {
+    width: 85%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+div.skills {
+    margin-bottom: 25px;
+}
+
+
+/* Barras de progreso de habilidades. */
+div.languajes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+div.progressBar {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    background-color: #242426;
+}
+
+div#htmlBar, div#cssBar, div#jsBar, div#phpBar, div#mysqlBar, div#gitBar, div#bootBar, div#nodejsBar {
+    width: 0;
+    height: 30px;
+    background-color: #016cbc;
+}
+
+div#htmlBar {
+    animation: htmlBar 4s infinite;
+}
+
+div#cssBar {
+    animation: cssBar 4s infinite;
+}
+
+div#jsBar {
+    animation: jsBar 4s infinite;
+}
+
+div#phpBar {
+    animation: phpBar 4s infinite;
+}
+
+div#mysqlBar {
+    animation: mysqlBar 4s infinite;
+}
+
+div#gitBar {
+    animation: gitBar 4s infinite;
+}
+
+div#bootBar {
+    animation: bootBar 4s infinite;
+}
+
+div#nodejsBar {
+    animation: nodejsBar 4s infinite;
+}
+
+
+/* Animación de las barras de progreso. */
+@keyframes htmlBar {
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes cssBar {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes jsBar {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes phpBar {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes mysqlBar {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes gitBar {
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes bootBar {
+    100% {
+        width: 55%;
+    }
+}
+
+@keyframes nodejsBar {
+    100% {
+        width: 85%;
+    }
+}
+
+/* Contactame. */
+section.contactContainer {
+    padding: 50px 0px;
+}
+
+h5.contactTitle {
+    font-size: 24px;
+}
+
+form.contactForm {
+    width: 85%;
+    align-items: center;
+    padding: 30px 0px;
+    border-top: 8px solid #016cbc;
+    border-bottom: 8px solid #016cbc;
+    border-radius: 8px;
+}
+
+input.inputContact {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #242426;
+    margin-bottom: 30px;
+    padding: 0px 15px;
+    color: #c2bcbc;
+    text-transform: uppercase;
+}
+
+textarea.msgContact {
+    width: 100%;
+    border: none;
+    background-color: #242426;
+    margin-bottom: 30px;
+    padding: 15px;
+    color: #c2bcbc;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+/* Footer. */
+footer.networksContainer {
+    background-color: #242426;
+    color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+div.networks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+}
+
+div.logoFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.fontLogoFooter {
+    color: lightgray;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+div.linksContainer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+a.linkNetwork {
+    outline: none;
+    text-decoration: none;
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+span.copy {
+    font-size: 12px;
+    padding: 30px 0px 0px;
+}
+
+/* Medias querys. */
+
+@media (min-width: 992px){
+
+
+    /* Barra de navegación. */
+    nav.mainNav {
+        height: 80px;
+    }
+
+    div.buttonBars {
+        display: none;
+    }
+
+    div.menu {
+        position: static;
+        height: 80px;
+    }
+    
+    ul.listMenu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        border-bottom: 1px solid #555;
+    }
+    
+    li.itemMenu {
+        width: 150px;
+    }
+    
+    a.linkMenu {
+        width: 100%;
+        height: 100%;
+        color: lightgray;
+    }
+
+    a.linkMenu:hover {
+        color: none;
+        color: #016cbc;
+    }
+
+
+    /* Header. */
+    header.homeContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.imgContainer, div.textContainer {
+        width: 50%;
+    }
+
+    h1.titlePortfolio {
+        font-size: 54px;
+        color: #fff;
+        padding: 20px 0px;
+    }
+
+    p.subtitle {
+        font-size: 24px;
+    }
+    
+    button.btnContact {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    img.imgBanner {
+        width: 50%;
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+
+
+    /* Mi perfil. */
+    section.profileContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2.titlePortfolio {
+        font-size: 30px;
+        color: #fff;
+        margin: 30px;
+    }
+
+    p.infoProfile {
+        display: block;
+        max-width: 800px;
+        font-size: 20px;
+        line-height: 25px;
+        color: #c2bcbc;
+        padding: 25px;
+        text-align: justify;
+        border-top: 8px solid #016cbc;
+        border-bottom: 8px solid #016cbc;
+        border-radius: 8px;
+        margin: 0px 10px 10px;
+    }
+
+    a.btnContact:hover {
+        border: 1px solid #016cbc;
+        background: none;
+        color: #016cbc; 
+        padding: 14px;
+    }
+
+
+    /* Tecnologías que uso. */
+    section.tecContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3.tecTitle {
+        font-size: 30px;
+    }
+
+
+    /* Mís habilidades. */
+    div.languajesContainer {
+        width: 60%;
+        margin: 15px auto;
+        padding: 10px;
+        border-radius: 2px;
+    }
+
+    img.tecImg {
+        width: 80px;
+    }
+
+    h4.habilitysTitle {
+        font-size: 32px;
+    }
+
+
+    /* Contactame. */ 
+    form.contactForm {
+        width: 65%;
+    }
+
+    h5.contactTitle {
+        font-size: 32px;
+    }
+
+    button.btnContact:hover {
+        border: 1px solid #016cbc;
+        background: none;
+        color: #016cbc;
+        padding: 14px;
+    }
+
+
+    /* Footer. */
+    div.networks {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    a.linkNetwork:hover {
+        background-color: #016cbc;
+    }
+}
