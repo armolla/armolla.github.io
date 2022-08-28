@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #000;
+}
+
 
 /* Barra de navegación. */
 nav.mainNav {
@@ -18,7 +22,7 @@ nav.mainNav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
+    background-color: #000;
     padding: 20px;
     border-bottom: 2px solid #555;
     position: fixed;
@@ -79,11 +83,11 @@ span.topBar {
 div.menu {
     position: absolute;
     left: -100%;
-    top: 62px;
+    top: 60px;
     width: 100vw;
-    height: calc(100vh - 62px);
-    background-color: #000;
+    height: calc(100vh - 60px);
     transition: left 1s ease;
+    background-color: #000;
 }
 
 ul.listMenu {
@@ -106,10 +110,9 @@ a.linkMenu {
 
 /* Header */
 header.homeContainer {
-    height: 100vh;
-    background-color: #000;
     display: flex;
     flex-direction: column;
+    padding: 200px 0px 300px;
 }
 
 div.imgContainer, div.textContainer {
@@ -118,6 +121,7 @@ div.imgContainer, div.textContainer {
     align-items: center;
     justify-content: center;
     height: 50%;
+    padding-bottom: 30px;
 }
 
 h1.titlePortfolio {
@@ -155,9 +159,7 @@ img.imgBanner {
 
 /* Mí perfil. */
 section.profileContainer {
-    background-color: #000;
-    height: 100vh;
-    padding: 20px 0px;
+    padding: 60px 0px;
 }
 
 h2.titlePortfolio {
@@ -184,12 +186,11 @@ p.infoProfile {
 
 /* Tecnologías que uso. */
 section.tecContainer {
-    background-color: #000;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 60px 0px;
 }
 
 img.tecImg {
@@ -229,11 +230,11 @@ div.tecIcons2 {
 
 /* Mís habilidades. */
 section.skillsContainer, section.contactContainer, form.contactForm {
-    background-color: #000;
     color: lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 80px 0px;
 }
 
 h4.habilitysTitle {
@@ -356,7 +357,7 @@ div#nodejsBar {
 
 /* Contactame. */
 section.contactContainer {
-    padding: 50px 0px;
+    padding: 80px 0px;
 }
 
 h5.contactTitle {
