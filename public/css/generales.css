@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --back: #000;
+    --light: #fff;
+    --error: #ff0000;
+    --done: #39ff14;
+    --presence: #016cbc;
+    --shadow: #242426;
+    --solid: #555;
+    --text: #c2bcbc;
+}
+
+body {
+    background-color: var(--back);
+}

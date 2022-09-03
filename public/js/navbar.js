@@ -26,7 +26,9 @@ document.querySelector('.buttonBars').addEventListener('click', ()=>{
 
 document.querySelectorAll('.linkMenu').forEach((value) => {
     value.addEventListener('click', ()=>{
-       hideMenu();
+        if (menu.style.left !== '-100%') {
+            hideMenu();
+        }    
     });
 });
 
@@ -37,7 +39,16 @@ document.querySelector('.logo').addEventListener('click', ()=>{
 });
 
 window.addEventListener('resize', ()=>{
-    if (screen.width >= 992 && menu.style.left !== '-100%') {
+    if (screen.width >= 992 && menu.style.left === '0%') {
         hideMenu();
     }
-})
+});
+
+window.addEventListener('scroll', ()=>{
+    console.log(scrollY);
+    if (scrollY >= 2300 && scrollY <= 3100) {
+        document.querySelectorAll('.progressBar div').forEach(value => value.style.display = 'block');
+    } else {
+        document.querySelectorAll('.progressBar div').forEach(value => value.style.display = 'none');
+    }
+});
