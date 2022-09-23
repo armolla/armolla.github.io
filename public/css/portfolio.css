@@ -220,7 +220,7 @@ section.skillsContainer, section.contactContainer, form.contactForm {
     padding: 80px 0px;
 }
 
-h4.habilitysTitle {
+h4.abilitiesTitle {
     font-size: 24px;
 }
 
@@ -360,28 +360,107 @@ input.inputContact {
     width: 100%;
     height: 40px;
     border: none;
+    outline: none;
     background-color: var(--shadow);
     padding: 0px 15px;
     color: var(--text);
-    text-transform: uppercase;
 }
 
 textarea.inputContact {
     width: 100%;
     border: none;
+    outline: none;
     background-color: var(--shadow);
     padding: 15px;
     color: var(--text);
-    text-transform: uppercase;
     font-size: 14px;
 }
 
-span.errorMsg {
+::placeholder {
+    text-transform: uppercase;
+}
+
+span.msg {
     width: 100%;
-    margin-bottom: 30px;
+    margin: 10px 0px 30px;
     text-align: start;
     text-transform: uppercase;
     font-size: 11px;
+    font-weight: 700;
+    word-spacing: 5px;
+}
+
+/* Modal con advertencia de error en el formulario de contacto. */
+div.errorContainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+img.errorImg {
+    width: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 20px;
+}
+
+div.msgContainer {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border: 4px solid var(--presence);
+    border-radius: 10px;
+    margin-top: -180px;
+    margin-right: 20px;
+    padding: 15px;
+    background-color: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.msgContainer::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 30px;
+    background-color: var(--presence);
+    position: absolute;
+    bottom: -14px;
+    left: 15px;
+    border-bottom-right-radius: 100%;
+    z-index: -1;
+}
+
+div.close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--shadow);
+    position: absolute;
+    top: -40px;
+    right: -5px;
+    border: 2px solid var(--presence);
+    border-radius: 50%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+p.msgModal {
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 
@@ -511,14 +590,11 @@ span.copy {
 
     a.btnContact, button.btnContact {
         color: var(--presence);
-        font-size: 14px;
-        text-transform: uppercase;
         background-color: var(--back);
         border: 1px solid var(--presence);
     }
     
     button.btnContact {
-        font-size: 16px;
         padding: 15px;
     }
     
@@ -560,7 +636,7 @@ span.copy {
     a.btnContact:hover {
         color: var(--light);
         background-color: var(--presence);
-        box-shadow: 0px 0px 10px var(--presence), 0px 0px 40px var(--presence), 0px 0px 80px var(--presence) ;
+        box-shadow: 0px 0px 10px var(--presence), 0px 0px 40px var(--presence), 0px 0px 80px var(--presence);
     }
 
 
@@ -588,7 +664,7 @@ span.copy {
         width: 80px;
     }
 
-    h4.habilitysTitle {
+    h4.abilitiesTitle {
         font-size: 32px;
     }
 
@@ -605,7 +681,7 @@ span.copy {
     button.btnContact:hover {
         color: var(--light);
         background-color: var(--presence);
-        box-shadow: 0px 0px 10px var(--presence), 0px 0px 40px var(--presence), 0px 0px 80px var(--presence) ;
+        box-shadow: 0px 0px 10px var(--presence), 0px 0px 40px var(--presence), 0px 0px 80px var(--presence);
     }
 
 

@@ -26,7 +26,7 @@ document.querySelector('.buttonBars').addEventListener('click', ()=>{
 
 document.querySelectorAll('.linkMenu').forEach((value) => {
     value.addEventListener('click', ()=>{
-        if (menu.style.left !== '-100%') {
+        if (menu.style.left !== '-100%' && screen.width <= 992) {
             hideMenu();
         }    
     });
@@ -45,7 +45,6 @@ window.addEventListener('resize', ()=>{
 });
 
 window.addEventListener('scroll', ()=>{
-    console.log(scrollY);
     if (scrollY >= 2300 && scrollY <= 3100) {
         document.querySelectorAll('.progressBar div').forEach(value => value.style.display = 'block');
     } else {
